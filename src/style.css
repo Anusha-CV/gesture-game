@@ -1,24 +1,27 @@
 body {
   margin: 0;
-  background: black;
+  background: #000;
   color: white;
-  text-align: center;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 video {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.4;
-  z-index: 1;
+  display: none;
 }
 
 canvas {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 3px solid red;
-  z-index: 10;
+  border: 3px solid #00FF00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  background: #111;
+  border-radius: 4px;
 }

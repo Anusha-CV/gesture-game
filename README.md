@@ -15,7 +15,36 @@ A real-time hand gesture detection application using MediaPipe Hands and Vite.
 
 ## Development Log
 
-### January 30, 2026
+### January 30, 2026 - V 0.0.2
+- **Breakout Game Implementation**
+  - Created gesture-controlled Breakout game with paddle and ball physics
+  - Paddle class with smooth gesture-based horizontal movement
+  - Ball class with velocity, collision detection, and spin mechanics
+  - BreakoutGame class managing game state, scoring, and auto-restart
+- **Gesture Control System**
+  - Created modular gesture detection utilities (`gestureDetector.js`)
+  - Open palm gesture → moves paddle (tracks wrist X position)
+  - Fist gesture → launches ball (fingertips below wrist detection)
+  - Debouncer class for 500ms cooldown to prevent accidental triggers
+- **Game Mechanics**
+  - Wall collision detection with proper bouncing
+  - Paddle collision with position-based spin effect
+  - Score tracking (10 points per bounce)
+  - HUD display with score, bounces, and instructions
+  - Game over detection and 3-second auto-restart
+- **Visual Enhancements**
+  - Increased canvas size to 1280x720 (HD resolution)
+  - Increased ball size to 15px radius for better visibility
+  - Semi-transparent hand tracking overlay
+  - Green paddle with outline styling
+  - Updated CSS for centered game layout
+- **Technical Improvements**
+  - Separated game loop from MediaPipe processing
+  - requestAnimationFrame for smooth 60 FPS gameplay
+  - Modular architecture with separated concerns
+  - No camera reinitialization per frame
+
+### January 30, 2026 - V 0.0.1
 - Fixed program initialization issues
   - Added missing `<video>` and `<canvas>` elements to index.html
   - Added CSS import to main.js for proper styling
@@ -29,10 +58,14 @@ A real-time hand gesture detection application using MediaPipe Hands and Vite.
   - Increased line width for better visibility
 
 ## Features
-- Real-time webcam hand detection
-- Visual feedback with landmark points and connections
-- Single hand tracking mode
-- Adjustable detection and tracking confidence levels
+- Gesture-controlled Breakout game
+- Real-time hand tracking with MediaPipe Hands
+- Open palm to move paddle, fist to launch ball
+- Physics-based ball movement with collision detection
+- Score tracking and auto-restart functionality
+- Visual hand tracking overlay
+- HD canvas (1280x720) for larger play area
+- Single hand tracking mode with high accuracy
 
 ## Usage
 Run the development server:
