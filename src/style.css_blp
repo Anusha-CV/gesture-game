@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+video, canvas {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+video {
+  opacity: 0.2;
+}
+
+canvas {
+  z-index: 2;
+}
